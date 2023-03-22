@@ -40,17 +40,16 @@ Now, generate a video:
 
 ```python
 import torch
-from diffusers import TextToVideoMSPipeline, DPMSolverMultistepScheduler
+from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
 from diffusers.utils import export_to_video
 
-pipe = TextToVideoMSPipeline.from_pretrained("diffusers/ms-text-to-video-sd", torch_dtype=torch.float16)
+pipe = DiffusionPipeline.from_pretrained("damo-vilab/text-to-video-ms-1.7b", torch_dtype=torch.float16, variant="fp16")
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
-pipe = pipe.to("cuda")
+pipe.enable_cpu_model_offload()
 
 prompt = "Spiderman is surfing"
-video_frames = pipe(prompt).frames
+video_frames = pipe(prompt, num_inference_steps=25).frames
 video_path = export_to_video(video_frames)
-print(video_path)
 ```
 
 Here are some results:
