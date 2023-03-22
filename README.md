@@ -73,6 +73,37 @@ Here are some results:
     </tr>
 </table>
 
+## Long Video Generation
+
+You can optimize for memory usage by enabling attention and VAE slicing and using Torch 2.0.
+This should allow you to generate videos up to 10 seconds on less than 16GB of GPU VRAM.
+
+```bash
+$ pip install git+https://github.com/huggingface/diffusers transformers accelerate
+```
+
+```py
+import torch
+from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
+from diffusers.utils import export_to_video
+
+# load pipeline
+pipe = DiffusionPipeline.from_pretrained("damo-vilab/text-to-video-ms-1.7b", torch_dtype=torch.float16, variant="fp16")
+pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
+
+# optimize for GPU memory
+pipe.enable_model_cpu_offload()
+pipe.enable_vae_slicing()
+
+# generate
+prompt = "Spiderman is surfing"
+video_frames = pipe(prompt, num_inference_steps=25, num_frames=80).frames
+
+# convent to video
+video_path = export_to_video(video_frames)
+```
+
+
 ## View results
 
 The above code will display the save path of the output video, and the current encoding format can be played with [VLC player](https://www.videolan.org/vlc/).
