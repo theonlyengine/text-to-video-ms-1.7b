@@ -76,7 +76,7 @@ Here are some results:
 ## Long Video Generation
 
 You can optimize for memory usage by enabling attention and VAE slicing and using Torch 2.0.
-This should allow you to generate videos up to 10 seconds on less than 16GB of GPU VRAM.
+This should allow you to generate videos up to 25 seconds on less than 16GB of GPU VRAM.
 
 ```bash
 $ pip install git+https://github.com/huggingface/diffusers transformers accelerate
@@ -96,8 +96,8 @@ pipe.enable_model_cpu_offload()
 pipe.enable_vae_slicing()
 
 # generate
-prompt = "Spiderman is surfing"
-video_frames = pipe(prompt, num_inference_steps=25, num_frames=80).frames
+prompt = Spiderman is surfing. Darth Vader is also surfing and following Spiderman"
+video_frames = pipe(prompt, num_inference_steps=25, num_frames=200).frames
 
 # convent to video
 video_path = export_to_video(video_frames)
