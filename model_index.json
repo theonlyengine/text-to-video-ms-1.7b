@@ -1,5 +1,5 @@
 {
-  "_class_name": "TextToVideoMSPipeline",
+  "_class_name": "TextToVideoSDPipeline",
   "_diffusers_version": "0.15.0.dev0",
   "scheduler": [
     "diffusers",

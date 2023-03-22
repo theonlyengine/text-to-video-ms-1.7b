@@ -33,7 +33,7 @@ This model has a wide range of applications, and can reason and generate videos 
 Let's first install the libraries required:
 
 ```bash
-$ pip install diffusers transformers git+https://github.com/huggingface/accelerate.git
+$ pip install git+https://github.com/huggingface/diffusers transformers accelerate
 ```
 
 Now, generate a video:
@@ -52,6 +52,27 @@ video_frames = pipe(prompt).frames
 video_path = export_to_video(video_frames)
 print(video_path)
 ```
+
+Here are some results:
+
+<table>
+    <tr>
+        <td><center>
+        An astronaut riding a horse.
+        <br>
+        <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/astr.gif"
+            alt="An astronaut riding a horse."
+            style="width: 300px;" />
+        </center></td>
+        <td ><center>
+        Darth vader surfing in waves.
+        <br>
+        <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/vader.gif"
+            alt="Darth vader surfing in waves."
+            style="width: 300px;" />
+        </center></td>
+    </tr>
+</table>
 
 ## View results
 
