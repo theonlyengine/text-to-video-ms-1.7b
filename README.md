@@ -53,6 +53,27 @@ video_path = export_to_video(video_frames)
 print(video_path)
 ```
 
+Here are some results:
+
+<table>
+    <tr>
+        <td><center>
+        An astronaut riding a horse.
+        <br>
+        <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/astr.gif"
+            alt="An astronaut riding a horse."
+            style="width: 300px;" />
+        </center></td>
+        <td ><center>
+        Darth vader surfing in waves.
+        <br>
+        <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/vader.gif"
+            alt="Darth vader surfing in waves."
+            style="width: 300px;" />
+        </center></td>
+    </tr>
+</table>
+
 ## View results
 
 The above code will display the save path of the output video, and the current encoding format can be played with [VLC player](https://www.videolan.org/vlc/).
