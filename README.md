@@ -33,7 +33,7 @@ This model has a wide range of applications, and can reason and generate videos 
 Let's first install the libraries required:
 
 ```bash
-$ pip install diffusers transformers git+https://github.com/huggingface/accelerate.git
+$ pip install git+https://github.com/huggingface/diffusers transformers accelerate
 ```
 
 Now, generate a video:
