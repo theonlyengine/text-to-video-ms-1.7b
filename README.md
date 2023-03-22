@@ -26,7 +26,7 @@ This model is meant for research purposes. Please look at the [model limitations
 
 ## Use cases
 
-This model has a wide range of applications, and can reason and generate videos based on arbitrary English text descriptions. 
+This model has a wide range of applications and can reason and generate videos based on arbitrary English text descriptions. 
 
 ## Usage 
 
@@ -96,7 +96,7 @@ pipe.enable_model_cpu_offload()
 pipe.enable_vae_slicing()
 
 # generate
-prompt = Spiderman is surfing. Darth Vader is also surfing and following Spiderman"
+prompt = "Spiderman is surfing. Darth Vader is also surfing and following Spiderman"
 video_frames = pipe(prompt, num_inference_steps=25, num_frames=200).frames
 
 # convent to video
