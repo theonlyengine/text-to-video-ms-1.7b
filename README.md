@@ -5,6 +5,12 @@ tags:
 duplicated_from: diffusers/text-to-video-ms-1.7b
 ---
 
+**We Are Hiring!** (Based in Beijing / Hangzhou, China.)
+
+If you're looking for an exciting challenge and the opportunity to work with cutting-edge technologies in AIGC and large-scale pretraining, then we are the place for you. We are looking for talented, motivated and creative individuals to join our team. If you are interested, please send your CV to us.
+
+EMAIL: yingya.zyy@alibaba-inc.com
+
 # Text-to-video-synthesis Model in Open Domain
 
 This model is based on a multi-stage text-to-video generation diffusion model, which inputs a description text and returns a video that matches the text description. Only English input is supported.
@@ -130,3 +136,15 @@ The output mp4 file can be viewed by [VLC media player](https://www.videolan.org
 The training data includes [LAION5B](https://huggingface.co/datasets/laion/laion2B-en), [ImageNet](https://www.image-net.org/), [Webvid](https://m-bain.github.io/webvid-dataset/) and other public datasets. Image and video filtering is performed after pre-training such as aesthetic score, watermark score, and deduplication.
 
 _(Part of this model card has been taken from [here](https://huggingface.co/damo-vilab/modelscope-damo-text-to-video-synthesis))_
+
+## Citation
+
+```bibtex
+    @InProceedings{VideoFusion,
+        author    = {Luo, Zhengxiong and Chen, Dayou and Zhang, Yingya and Huang, Yan and Wang, Liang and Shen, Yujun and Zhao, Deli and Zhou, Jingren and Tan, Tieniu},
+        title     = {VideoFusion: Decomposed Diffusion Models for High-Quality Video Generation},
+        booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+        month     = {June},
+        year      = {2023}
+    }
+```
