@@ -5,15 +5,15 @@ tags:
 duplicated_from: diffusers/text-to-video-ms-1.7b
 ---
 
+# Text-to-video-synthesis Model in Open Domain
+
+This model is based on a multi-stage text-to-video generation diffusion model, which inputs a description text and returns a video that matches the text description. Only English input is supported.
+
 **We Are Hiring!** (Based in Beijing / Hangzhou, China.)
 
 If you're looking for an exciting challenge and the opportunity to work with cutting-edge technologies in AIGC and large-scale pretraining, then we are the place for you. We are looking for talented, motivated and creative individuals to join our team. If you are interested, please send your CV to us.
 
 EMAIL: yingya.zyy@alibaba-inc.com
-
-# Text-to-video-synthesis Model in Open Domain
-
-This model is based on a multi-stage text-to-video generation diffusion model, which inputs a description text and returns a video that matches the text description. Only English input is supported.
 
 ## Model description
 
