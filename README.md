@@ -140,6 +140,12 @@ _(Part of this model card has been taken from [here](https://huggingface.co/damo
 ## Citation
 
 ```bibtex
+    @article{wang2023modelscope,
+      title={Modelscope text-to-video technical report},
+      author={Wang, Jiuniu and Yuan, Hangjie and Chen, Dayou and Zhang, Yingya and Wang, Xiang and Zhang, Shiwei},
+      journal={arXiv preprint arXiv:2308.06571},
+      year={2023}
+    }
     @InProceedings{VideoFusion,
         author    = {Luo, Zhengxiong and Chen, Dayou and Zhang, Yingya and Huang, Yan and Wang, Liang and Shen, Yujun and Zhao, Deli and Zhou, Jingren and Tan, Tieniu},
         title     = {VideoFusion: Decomposed Diffusion Models for High-Quality Video Generation},
